@@ -1,35 +1,15 @@
  <link rel="stylesheet" href="/css/font-awesome.min.css">
 <h1>Hello world!</h1>
 <p>Nt sure yet what to put here, dw I will come up with something :P</p>
- <style>
-     .thumb-image {
-       visibility: hidden;
-     }
- </style>
- <script>
-     (function(){
-     
-     var body=document.getElementsByTagName("body");
-     
-     if (body[0].getAttribute("id")=="collection-54d11b07e4b0a33bbb20a490") {
-       var images = [
-       "http://www.mediafactory.org.au/alexandra-race-lyons/files/2014/07/creative-commons-2-1ef4xzl.png",
-       "http://www.mediafactory.org.au/alexandra-race-lyons/files/2014/07/creative-commons-2-1ef4xzl.png", 
-       "http://www.mediafactory.org.au/alexandra-race-lyons/files/2014/07/creative-commons-2-1ef4xzl.png"
-       ];
- 
-       var imgCount = images.length;
- 
-       var randNumber=Math.floor((Math.random() * imgCount) + 1);
- 
-       imgURL = images[randNumber-1];
- 
-       var image=document.getElementsByClassName("thumb-image loaded");
-       image[0].setAttribute("src", imgURL);
-       image[0].setAttribute("data-image", imgURL);
-       image[0].setAttribute("data-src", imgURL);
-       image[0].style.visibility="visible";
-     }
- 
-   }());
- </script>
+ <?php
+  $bg = array('bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg', 'bg-07.jpg' ); // array of filenames
+
+  $i = rand(0, count($bg)-1); // generate random number size of the array
+  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+?><style type="text/css">
+<!--
+body{
+background: url(images/<?php echo $selectedBg; ?>) no-repeat;
+}
+-->
+</style>

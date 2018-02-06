@@ -1,26 +1,274 @@
-<!DOCTYPE html>
-<html>
-  <head>
-<?php
-  $bg = array('bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg', 'bg-1.jpg'); // array of filenames
+<!—- Hey! Not sure what are you doing here..? But if you need any help, message me :) —->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>lad8s.com</title>
+<script src=./js/random_bg.js></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+		.bg {background-attachment:fixed; background-repeat: no-repeat; background-position:center;background-size: 100% 100%;}
+		.fa-spin-hover:hover {
+  -webkit-animation: fa-spin 0.5s infinite linear;
+  -moz-animation: fa-spin 0.5s infinite linear;
+  -o-animation: fa-spin 0.5s infinite linear;
+  animation: fa-spin 0.5s infinite linear;
+}
+.strokeme
+{
+    color: #080806;
+    text-shadow:
+    -1px -1px 0 #E0DDCE,
+    1px -1px 0 #E0DDCE,
+    -1px 1px 0 #E0DDCE,
+    1px 1px 0 #E0DDCE;
+    
+}
+img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.imgA1 {
+  z-index: 1;
+    height: 150;
+    width: 150;
+  border-radius: 50%;
+}
+.imgB1 {
+  z-index: 1;
+  position: center;
+}
+	</style>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #080806;
+    box-sizing: border-box;
+}
 
-  $i = rand(0, count($bg)-1); // generate random number size of the array
-  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-?>
-<style> 
-html {
-  background: url(images/<?php echo $selectedBg; ?>) no-repeat center fixed; 
-  background-size: cover;
+/* Set a style for all buttons */
+button {
+    background-color: #353535;
+    color: #E0DDCE;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+border-radius: 12px;
+border: 1.25px solid #E0DDCE;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #78111F;
+}
+.specialsbtn {
+position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Center the image and position the close button */
+
+
+img.avatar {
+    position: relative;
+
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #E0DDCE;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 75%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #353535;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #78111F;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
 }
 </style>
 </head>
-<body>
+<img class="imgB1" alt=“lad8s logo” src=./images/lad8s_logo_150.PNG>
+<div class="strokeme">
+<body class="bg">
 
-<div id="example1">
-<h1>Lorem Ipsum Dolor</h1>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+	<div style="background:#235789 !important" class="jumbotron clearfix">
+  <div class="container text-center">
+    <h1>lad8s.com</h1> 
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="specialsbtn">specials</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+   
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src=./images/lad8s_logo_150X192.png alt="Avatar" class="avatar">
+   
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input style="background:#E0DDCE !important" type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input style="background:#E0DDCE !important" type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <input style="background:#E0DDCE !important" type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#E0DDCE">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>     
+  </div>
 </div>
+<div style="background:#353535 !important" class="well">
+<h1>Websites by lad8s:</h1>
+<p>List of the websites made by us:
+<ul>
+	<li><a href="http://thermostar.org.uk/">http://thermostar.org.uk/</a></li>
+	<li><a href="http://healthyclean.co.uk/">http://healthyclean.co.uk/</a></li>
+	<li><a href="http://lados.ucoz.ru/">http://lados.ucoz.ru/</a></li>
+</ul>
+</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Info 1</h3>
+      <p>Text</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Info 2</h3>
+      <p>Text</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Info 3</h3>        
+      <p>Text</p>
+    </div>
+  </div>
+</div>
+<div class=“container”>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div style="background:#353535 !important" class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Music <i class="fa fa-music" aria-hidden="true"></i></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div style="background:#E0DDCE !important" class="panel-body">
+<h5>Here you can see some of my recent involvement with the mic <i class="fa fa-microphone" aria-hidden="true"></i>:</h5>
+<h6>lad8s - My Energy (demo)</h6>
+<p><object type="application/x-shockwave-flash" width="299" height="25" data="https://www.youtube.com/v/exbU1WSFiyw?version=2&loop=1&enablejsapi=1&hd=1&theme=dark"><param name="movie" value="https://www.youtube.com/v/exbU1WSFiyw?version=2&loop=1&enablejsapi=1&hd=1&theme=dark" /><param name="wmode" value="transparent" /></object></p>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<footer style="background:#235789 !important" class="container-fluid text-center">
+  <h5>Contact us / Social</h5>
+  <p><a href="mailto:lad8s@lad8s.com" target="_blank"><i class="fa fa-envelope fa-spin-hover fa-lg"></i></a>
+ <a href="https://www.facebook.com/lad8s" target="_blank"><i class="fa fa-facebook fa-spin-hover fa-lg"></i></a><a href="https://www.instagram.com/lad8s" target="_blank"><i class="fa fa-instagram fa-spin-hover fa-lg"></i></a><a href="https://www.twitter.com/lad8s" target="_blank"><i class="fa fa-twitter fa-spin-hover fa-lg"></i></a><a href="https://vk.com/lad8s" target="_blank"><i class="fa fa-vk fa-spin-hover fa-lg"></i></a><a href="https://www.linkedin.com/in/patrik-lados-b47667b8/" target="_blank"><i class="fa fa-linkedin fa-spin-hover fa-lg"></i></a>
+ </div>
+  </p>
+</footer>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
+</div>
+
 </html>
+
+

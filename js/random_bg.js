@@ -1,7 +1,7 @@
 // Background - big
 
 function changeImg(imgNumber)	{
-			var myImages = ["images/bg/Screenshot_screenshot_from_star_lord.png","images/bg/Screenshot_from_silver_surfer.png","images/bg/Screenshot_from_moon_knight.png","images/bg/from_nova_comic_book.png"]; 
+			var myImages = ["images/bg/by_Andrew282.png","images/bg/Screenshot_screenshot_from_star_lord.png","images/bg/Screenshot_from_silver_surfer.png","images/bg/Screenshot_from_moon_knight.png","images/bg/from_nova_comic_book.png"]; 
 			var imgShown = document.body.style.backgroundImage;
 			var newImgNumber =Math.floor(Math.random()*myImages.length);
 			document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';

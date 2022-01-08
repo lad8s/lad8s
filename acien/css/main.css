@@ -77,6 +77,12 @@
   }
   @media (max-width: 576px) {.shaketext{
     top: 60%;
+    font-size: 56px;
+  }
+  }
+
+  @media (max-width: 576px) {.nav-link{
+    font-size: 56px;
   }
   }
   

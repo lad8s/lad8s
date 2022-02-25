@@ -15,7 +15,7 @@
 	height:85px;
 	position:absolute;
 	background:rgba(0,0,0, 0.5);
-	z-index:10000;
+	z-index:10;
 	top:-100px;
 	left:-17px;
 	display:none;

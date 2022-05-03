@@ -1,6 +1,6 @@
-html {
+/*html {
     min-width: 100%;
-}
+}*/
 body {
   --l: calc(100vw/var(--n-cols));
   --hl: calc(.5*var(--l));
@@ -15,6 +15,7 @@ body {
   padding: var(--hl) 0;
   height: 100vh;
   filter: drop-shadow(2px 2px 5px);
+    min-width: 100%;
 }
 @media (orientation: landscape) {
   body {

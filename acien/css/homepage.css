@@ -50,6 +50,9 @@ p {
   left: 85%;
 }
 @media screen and (max-width: 780px) {
+  .logo{
+    width:50%;
+  }
   p {
     font-size: 60px;
   }

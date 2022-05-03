@@ -10,7 +10,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: var(--hl) 0;
-  height: 100vh;
+  height: 100%;
   filter: drop-shadow(2px 2px 5px);
 }
 @media (orientation: landscape) {

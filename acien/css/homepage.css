@@ -3,7 +3,7 @@
   src: url(../images/Velvet\ Heart\ Font.ttf);
 }
 html {
-  width: 100vh;
+  width: 100%;
   }
   body{
     background: url(../images/bg.png) no-repeat center fixed;
